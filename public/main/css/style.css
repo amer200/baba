@@ -3,6 +3,10 @@
     height: 85px;
 }
 
+body {
+    overflow: hidden;
+}
+
 /***************** wheel *********************/
 .mainbox {
     position: relative;
