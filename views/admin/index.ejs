@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel=" stylesheet" href="/admin/css/admin.css">
+    <title>Admin/baba</title>
+</head>
+
+<body>
+    <!--start side bar-->
+    <div class="container-fluid overflow-hidden">
+        <div class="row vh-100 overflow-auto">
+            <div class="col-12 col-sm-3 col-xl-2 px-sm-2 px-0  d-flex sticky-top bg-img">
+                <div
+                    class="d-flex flex-sm-column flex-row flex-grow-1 align-items-center align-items-sm-start px-3 pt-2 text-white">
+                    <a href="/"
+                        class="d-flex align-items-center pb-sm-3 mb-md-0 me-md-auto text-white text-decoration-none">
+                        <span class="fs-5">Ba<span class="d-none d-sm-inline">Ba</span></span>
+                    </a>
+                    <div class="dropdown py-sm-4 mt-sm-auto ms-auto ms-sm-0 flex-shrink-1">
+                        <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle"
+                            id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="/imgs/logo.png" alt="hugenerd" width="28" height="28" class="rounded-circle">
+                            <span class="d-none d-sm-inline mx-1">BaBa</span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
+                            <li><a class="dropdown-item" href="/admin/logout">تسجيل الخروج</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col d-flex flex-column h-sm-100 gray">
+                <main class="row overflow-auto">
+                    <div class="col pt-4">
+                        <h3>الوجبات</h3>
+                        <form action="/admin/post-meal" method="post">
+                            <div class="mb-3">
+                                <input type="text" class="form-control" name="box1" value="<%=box1[0]%>"
+                                    placeholder="اسم الوجبة" required>
+                            </div>
+                            <div class="mb-3">
+                                <input type="text" class="form-control" name="box1" value="<%=box1[1]%>"
+                                    placeholder="اسم الوجبة" required>
+                            </div>
+                            <div class="mb-3">
+                                <input type="text" class="form-control" name="box1" value="<%=box1[2]%>"
+                                    placeholder="اسم الوجبة" required>
+                            </div>
+                            <div class="mb-3">
+                                <input type="text" class="form-control" name="box1" value="<%=box1[3]%>"
+                                    placeholder="اسم الوجبة" required>
+                            </div>
+                            <div class="mb-3">
+                                <input type="text" class="form-control" name="box1" value="<%=box1[4]%>"
+                                    placeholder="اسم الوجبة" required>
+                            </div>
+                            <div class="mb-3">
+                                <input type="text" class="form-control" name="box2" value="<%=box2[0]%>"
+                                    placeholder="اسم الوجبة" required>
+                            </div>
+                            <div class="mb-3">
+                                <input type="text" class="form-control" name="box2" value="<%=box2[1]%>"
+                                    placeholder="اسم الوجبة" required>
+                            </div>
+                            <div class="mb-3">
+                                <input type="text" class="form-control" name="box2" value="<%=box2[2]%>"
+                                    placeholder="اسم الوجبة" required>
+                            </div>
+                            <div class="mb-3">
+                                <input type="text" class="form-control" name="box2" value="<%=box2[3]%>"
+                                    placeholder="اسم الوجبة" required>
+                            </div>
+                            <div class="mb-3">
+                                <input type="text" class="form-control" name="box2" value="<%=box2[4]%>"
+                                    placeholder="اسم الوجبة" required>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary">حفظ</button>
+                        </form>
+                    </div>
+                </main>
+            </div>
+            <div class="row">
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    <!-- end side bar-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/html5-qrcode" type="text/javascript"></script>
+    <script src="/js/admin.js"></script>
+</body>
+
+</html>
