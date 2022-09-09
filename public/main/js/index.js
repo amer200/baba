@@ -31,6 +31,9 @@ function spin() {
    let Sanken = shuffle([1750, 2110, 2470]);
    let Electrolux = shuffle([1630, 1990, 2350]);
    let JblSpeaker = shuffle([1570, 1930, 2290]);
+   let f1 = shuffle([1470, 1870, 2190]);
+   let f2 = shuffle([1340, 1820, 2150]);
+   let f3 = shuffle([1300, 1790, 2100]);
 
    let Hasil = shuffle([
       MagicRoaster[0],
@@ -40,6 +43,9 @@ function spin() {
       Sanken[0],
       Electrolux[0],
       JblSpeaker[0],
+      f1[0],
+      f2[0],
+      f3[0]
    ]);
    // console.log(Hasil[0]);
 
@@ -51,6 +57,11 @@ function spin() {
    if (Sanken.includes(Hasil[0])) SelectedItem = document.getElementById('m-5').innerHTML;
    if (Electrolux.includes(Hasil[0])) SelectedItem = document.getElementById('m-6').innerHTML;
    if (JblSpeaker.includes(Hasil[0])) SelectedItem = document.getElementById('m-7').innerHTML;
+   if (f1.includes(Hasil[0])) SelectedItem = document.getElementById('m-8').innerHTML;
+   if (f2.includes(Hasil[0])) SelectedItem = document.getElementById('m-9').innerHTML;
+   if (f3.includes(Hasil[0])) SelectedItem = document.getElementById('m-10').innerHTML;
+
+
 
    // spin
    box.style.setProperty("transition", "all ease 5s");
@@ -66,7 +77,7 @@ function spin() {
       swal(
          "بابا بيقولك ",
          "اطلب" + SelectedItem + ".",
-         '/imgs/logo.png'
+         '/imgs/logo.svg'
       );
    }, 5500);
 

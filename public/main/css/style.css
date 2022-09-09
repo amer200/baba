@@ -1,21 +1,38 @@
+* {
+    font-family: 'Cairo', sans-serif;
+}
+
+@font-face {
+    font-family: etab;
+    src: url(/fonts/etab.otf);
+}
+
 .navbar .navbar-brand img {
-    width: 85px;
-    height: 85px;
+    width: 200px;
+    height: 200px;
 }
 
 html,
 body {
     margin: 0;
     height: 100%;
-    overflow: hidden
+    overflow-x: hidden;
+    background-image: url('/imgs/background.png');
+    background-position: center;
+}
+
+.navbar .container {
+    text-align: center;
+    margin-bottom: 60px;
 }
 
 /***************** wheel *********************/
 .mainbox {
     position: relative;
-    width: 500px;
-    height: 500px;
-    right: 30%;
+    width: 450px;
+    height: 450px;
+    top: -55px;
+    right: 32.5%;
 }
 
 .mainbox:after {
@@ -23,8 +40,6 @@ body {
     content: "";
     width: 100%;
     height: 100%;
-    background: url(./arrow-bottom.png) no-repeat;
-    background-size: 5%;
     left: 5%;
     top: 48%;
     transform: rotate(90deg);
@@ -50,31 +65,31 @@ span {
 
 .span1 {
     clip-path: polygon(0 17%, 0 50%, 50% 50%);
-    background-color: green;
+    background-color: #9B9B9B;
 }
 
 .span2 {
     clip-path: polygon(0 17%, 30% 0, 50% 50%);
-    background-color: red;
+    background-color: #F2CEAC;
 }
 
 .span3 {
     clip-path: polygon(30% 0, 71% 0, 50% 50%);
-    background-color: blue;
+    background-color: #5A483E;
 }
 
 .span4 {
     clip-path: polygon(71% 0, 100% 18%, 50% 50%);
-    background-color: salmon;
+    background-color: #638294;
 }
 
 .span5 {
     clip-path: polygon(100% 18%, 100% 50%, 50% 50%);
-    background: #ff8300;
+    background: #F39DA0;
 }
 
 .box2 .span3 {
-    background-color: #00ff04;
+    background-color: #fff;
 }
 
 .box2 {
@@ -162,6 +177,11 @@ span {
     text-align: center;
 }
 
+.box1 b,
+.box2 b {
+    opacity: 0;
+}
+
 .spin {
     position: absolute;
     top: 50%;
@@ -171,7 +191,7 @@ span {
     height: 75px;
     border-radius: 50%;
     border: 4px solid white;
-    background-color: #ff5722;
+    background-color: #2D315C;
     color: #fff;
     box-shadow: 0 5px 20px #000;
     font-weight: bold;
@@ -188,6 +208,18 @@ span {
 
 .mainbox.animate:after {
     animation: animateArrow 0.7s ease infinite;
+}
+
+.baba-txt {
+    text-align: center;
+    color: #fff;
+}
+
+.baba-txt h2 {
+    font-family: etab;
+    font-size: 5rem;
+    margin-bottom: 0px;
+    margin-top: 0px;
 }
 
 audio {
@@ -213,9 +245,31 @@ audio {
     }
 
     .mainbox {
-        width: 85%;
+        width: 320px;
         height: 320px;
         right: 3%;
         margin-top: 95px;
     }
+}
+
+@media (min-width:768px) and (max-width: 991px) {
+    .navbar .container {
+        text-align: center;
+    }
+
+    .mainbox {
+        width: 320px;
+        height: 320px;
+        right: 33%;
+        margin-top: 95px;
+    }
+}
+
+.swal-text {
+    font-size: 1.5rem;
+}
+
+.swal-icon img {
+    max-width: 40%;
+    max-height: 100%;
 }
